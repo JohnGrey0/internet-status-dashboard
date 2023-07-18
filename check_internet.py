@@ -5,22 +5,33 @@ import requests
 
 def check_internet_connection():
     try:
-        response = requests.get("https://www.google.com", timeout=5)
+        url="https://www.google.com"
+        response = requests.get(url, timeout=5)
         response.raise_for_status()
+        print("Got response from {url}".format(url=url))
         return True
     except requests.RequestException:
+        print("Failed to get response from {url}".format(url=url))
         return False
 
 def run_speed_test():
-    st = speedtest.Speedtest(secure=True)
-    st.get_best_server()
-    download_speed = st.download() / 1_000_000  # Convert to Mbps
-    upload_speed = st.upload() / 1_000_000  # Convert to Mbps
-    return download_speed, upload_speed
+    try:
+        st = speedtest.Speedtest(secure=True)
+        st.get_best_server()
+        download_speed = st.download() / 1_000_000  # Convert to Mbps
+        upload_speed = st.upload() / 1_000_000  # Convert to Mbps
+        print("Speedtest down: {down}, upload: {up}".format(down=download_speed, up=upload_speed))
+        return download_speed, upload_speed
+    except Exception as e:
+        print(f"Error during speed test: {e}")
+        return 0, 0
 
 def save_results_to_json(results):
-    with open("speed_test_results.json", "w") as file:
-        json.dump(results, file)
+    try:
+        with open("speed_test_results.json", "w") as file:
+            json.dump(results, file)
+    except Exception as e:
+        print(f"Error saving results to JSON: {e}")
 
 def main():
     try:

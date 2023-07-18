@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
             displayOutageCount(outageCount);
             const dailyOutageAverage = calculateDailyOutageAverage(data);
             displayDailyOutageAverage(dailyOutageAverage);
-
             const downloadSpeedAverage = calculateAverageSpeed(data, 'download_speed');
             const uploadSpeedAverage = calculateAverageSpeed(data, 'upload_speed');
             displayAverageSpeeds(downloadSpeedAverage, uploadSpeedAverage);

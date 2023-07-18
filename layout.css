@@ -37,11 +37,10 @@ h1 {
     color: #003f98;
 }
 
-
-.column {
-    float: left;
-    width: 50%;
+.column{
+    width: 100%;
 }
+
 .row:after {
     content: "";
     display: table;
@@ -53,6 +52,6 @@ body {
 }
 
 .chart-container {
-    max-width: 800px;
+    max-width: 100%;
     margin: auto;
 }
