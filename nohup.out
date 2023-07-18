@@ -1470,3 +1470,14 @@ OSError: [Errno 98] Address already in use
 192.168.1.87 - - [18/Jul/2023 15:41:10] "GET /speed_test_results.json HTTP/1.1" 304 -
 192.168.1.87 - - [18/Jul/2023 15:43:06] "GET / HTTP/1.1" 304 -
 192.168.1.87 - - [18/Jul/2023 15:43:06] "GET /speed_test_results.json HTTP/1.1" 304 -
+192.168.1.87 - - [18/Jul/2023 15:44:06] "GET / HTTP/1.1" 200 -
+192.168.1.87 - - [18/Jul/2023 15:44:07] "GET /speed_test_results.json HTTP/1.1" 304 -
+192.168.1.87 - - [18/Jul/2023 15:44:34] "GET / HTTP/1.1" 304 -
+192.168.1.87 - - [18/Jul/2023 15:44:35] "GET /speed_test_results.json HTTP/1.1" 304 -
+192.168.1.87 - - [18/Jul/2023 15:45:16] "GET / HTTP/1.1" 304 -
+192.168.1.87 - - [18/Jul/2023 15:45:16] "GET /speed_test_results.json HTTP/1.1" 200 -
+192.168.1.87 - - [18/Jul/2023 15:45:28] "GET / HTTP/1.1" 200 -
+192.168.1.87 - - [18/Jul/2023 15:45:28] "GET /speed_test_results.json HTTP/1.1" 304 -
+192.168.1.87 - - [18/Jul/2023 15:45:52] "GET / HTTP/1.1" 200 -
+192.168.1.87 - - [18/Jul/2023 15:45:52] "GET /speed_test_results.json HTTP/1.1" 200 -
+192.168.1.87 - - [18/Jul/2023 15:45:52] "GET /speed_test_results.json HTTP/1.1" 304 -
