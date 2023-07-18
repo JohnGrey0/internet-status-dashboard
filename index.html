@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speed Test Results</title>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <!-- Add the Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Add the Luxon library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.1.6/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <h1>Speed Test Results</h1>
+    <div class="row">
+        <div class="column">
+            <div class="chart-container">
+                <table id="resultsTable" class="styled-table">
+                    <thead>
+                        <tr class="active-row">
+                            <th>Timestamp</th>
+                            <th>Download Speed (Mbps)</th>
+                            <th>Upload Speed (Mbps)</th>
+                            <th>Internet Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>          
+            </div>
+        </div>
+        <div class="column">
+            <div id="chart-container">
+                <canvas id="line-chart"></canvas>
+            </div>
+            <br>
+            <div id="chart-container">
+                <canvas id="speeds-chart"></canvas>
+            </div>
+            <br>
+            <div id="chart-container">
+                <div id="outage-count-container"></div>
+            </div>
+            <br>
+            <div id="chart-container">
+                <div id="daily-outage-average-container"></div>
+            </div>
+            <br>
+            <div id="chart-container">
+                <div id="file-size-container"></div>
+            </div>
+            <div id="chart-container">
+                <div id="average-speeds-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

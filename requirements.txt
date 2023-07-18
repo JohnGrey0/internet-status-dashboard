@@ -1,0 +1,2 @@
+speedtests
+requests
