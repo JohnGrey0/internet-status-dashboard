@@ -38,7 +38,9 @@ h1 {
 }
 
 .column{
-    width: 100%;
+    float: left;
+    width: 50%;
+    margin: auto;
 }
 
 .row:after {
@@ -48,10 +50,10 @@ h1 {
 }
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 40px;
 }
 
 .chart-container {
-    max-width: 100%;
+    max-width: 95%;
     margin: auto;
 }
