@@ -46,15 +46,16 @@ def main():
 
         if internet_available:
             download_speed, upload_speed = run_speed_test()
-
+            internet_status = "Available"
+            if download_speed == 0 or upload_speed == 0:
+                internet_status = "Unavailable"
             new_result = {
                 "timestamp": timestamp,
                 "download_speed": download_speed,
                 "upload_speed": upload_speed,
-                "internet_status": "Available"
+                "internet_status": internet_status
             }
         else:
-            # print("No internet connection.")
             new_result = {
                 "timestamp": timestamp,
                 "download_speed": 0,
