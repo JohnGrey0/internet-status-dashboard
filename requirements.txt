@@ -1,2 +1,2 @@
-speedtests
+speedtest-cli
 requests
